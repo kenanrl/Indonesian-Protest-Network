@@ -141,18 +141,6 @@ All notebooks are designed to run in [Google Colab](https://colab.research.googl
 
 ---
 
-## Key Metrics Introduced
-
-This study introduces three analytical tools applicable to protest network analysis:
-
-**Excitation Index (EI):** Captures narrative-level diffusion intensity through cascade depth and post-shift engagement. Ranks narratives by their structural excitation effect rather than raw volume.
-
-**Actor Role Classification:** Classifies accounts as Attention Sinks (high in-degree, limited outward diffusion), Local Amplifiers (within-community relay), or Diffusion Drivers (systematic cross-community edge generation), using hop-level decomposition.
-
-**Cognitive Fusion Index (CFI):** Quantifies a narrative's structural integrative capacity — the degree to which it penetrates community boundaries through cascade depth, cross-community reach, and porosity change — treating vertical penetration and horizontal boundary permeability as separable, simultaneously measurable dimensions.
-
----
-
 ## License
 
 The dataset and code in this repository are shared under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE).
