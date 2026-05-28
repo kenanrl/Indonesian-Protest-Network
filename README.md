@@ -33,8 +33,8 @@ Indonesian-Protest-Network/
 │   └── raw-data-hashed.csv                                                    ← Anonymized tweet dataset
 │
 ├── data-analysis/
-│   ├── data-analysis/BERTopic Setup.ipynb                                     ← Topic modeling on protest tweets
-│   ├── BERTopic: Linking Diffusion Depth to Topic Change.ipynb                ← Composite diffusion score per topic
+│   ├── BERTopic Setup.ipynb                                                   ← Topic modeling on protest tweets
+│   ├── BERTopic Linking Diffusion Depth to Topic Change.ipynb                 ← Composite diffusion score per topic
 │   ├── Network Graph Construction.ipynb                                       ← Directed interaction network construction
 │   ├── Community Detection.ipynb                                              ← Louvain community detection
 │   ├── Social Penetration Metrics.ipynb                                       ← Cross-community penetration metrics
