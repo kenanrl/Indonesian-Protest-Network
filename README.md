@@ -32,7 +32,7 @@ Indonesian-Protest-Network/
 ├── main-data/
 │   └── raw-data-hashed.csv                                                    ← Anonymized tweet dataset
 │
-├── data-analysis/
+├── analytical-notebook/
 │   ├── BERTopic Setup.ipynb                                                   ← Topic modeling on protest tweets
 │   ├── BERTopic Linking Diffusion Depth to Topic Change.ipynb                 ← Composite diffusion score per topic
 │   ├── Network Graph Construction.ipynb                                       ← Directed interaction network construction
