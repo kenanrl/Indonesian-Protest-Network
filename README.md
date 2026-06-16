@@ -12,7 +12,7 @@ This repository contains the anonymized dataset and Python analytical notebooks 
 
 > **"Who Carries the Message? Mapping the Hidden Infrastructure of Grassroots Solidarity in Indonesia's 2025 Digital Protest Networks"**
 
-The repository is shared to ensure transparency and reproducibility in accordance with the journal's data availability policy. The analytical pipeline combines network analysis (Louvain community detection, cascade depth tracking), BERTopic-based thematic modeling, and novel composite metrics, the Excitation Index and Cognitive Fusion Index (CFI) to examine how protest narratives diffused across structurally fragmented communities on platform X during the Indonesian civic unrest of August-September 2025.
+The repository is shared to ensure transparency and reproducibility in accordance with the journal's data availability policy. The analytical pipeline combines network analysis (Louvain community detection, cascade depth tracking), BERTopic-based thematic modeling, and two novel composite metrics, the Excitation Index (EI) and the Cognitive Fusion Index (CFI), to examine how protest narratives diffused across structurally fragmented communities on platform X during the Indonesian civic unrest of August–September 2025.
 
 ---
 
@@ -30,30 +30,32 @@ The dataset provided in this repository has been processed to comply with platfo
 Indonesian-Protest-Network/
 │
 ├── main-data/
-│   └── raw-data-hashed.csv                                                    ← Anonymized tweet dataset
+│   └── raw-data-hashed.csv                                              ← Anonymized tweet dataset
 │
 ├── analytical-notebook/
-│   ├── BERTopic Setup.ipynb                                                   ← Topic modeling on protest tweets
-│   ├── BERTopic Linking Diffusion Depth to Topic Change.ipynb                 ← Composite diffusion score per topic
-│   ├── Network Graph Construction.ipynb                                       ← Directed interaction network construction
-│   ├── Community Detection.ipynb                                              ← Louvain community detection
-│   ├── Social Penetration Metrics.ipynb                                       ← Cross-community penetration metrics
-│   ├── Excitation Effect & Narrative Shift Trigger (Steps 1 and 2).ipynb      ← Temporal excitation & engagement velocity
-│   ├── Excitation Effect & Narrative Shift Trigger (Steps 3 and 4).ipynb      ← Statistical integration & cascade trigger
-│   ├── Actor Role Analysis.ipynb                                              ← Actor role classification (sink vs driver)
-│   └── Cross-Community Penetration & Cognitive Fusion.ipynb                   ← Community porosity & CFI computation
+│   ├── BERTopic Setup.ipynb                                             ← Thematic modeling (19 topics)
+│   ├── BERTopic Linking Diffusion Depth to Topic Change.ipynb           ← Composite diffusion score per topic
+│   ├── Network Graph Construction.ipynb                                 ← Directed interaction network construction
+│   ├── Community Detection.ipynb                                        ← Louvain community detection
+│   ├── Social Penetration Metrics.ipynb                                 ← Cross-community penetration metrics
+│   ├── Excitation Effect & Narrative Shift Trigger (Steps 1 and 2).ipynb ← Temporal excitation & engagement velocity
+│   ├── Excitation Effect & Narrative Shift Trigger (Steps 3 and 4).ipynb ← Statistical integration & Excitation Index
+│   ├── Actor Role Analysis.ipynb                                        ← Actor role classification (sink vs driver)
+│   ├── Cross-Community Penetration & Cognitive Fusion.ipynb             ← Community porosity & CFI computation
+│   ├── Fix Figure6 Engagement vs Structural Reach Final.ipynb           ← Engagement–structure dissociation (Spearman, Figure 6)
+│   └── Fix Analysis Novelty3 Engagement per Narrative.ipynb             ← Per-narrative engagement comparison (Table S1)
 │
-├── CITATION.cff                                                               ← Citation metadata
-├── LICENSE                                                                    ← Creative Commons Attribution 4.0 License
-└── README.md                                                                  ← This file
+├── CITATION.cff                                                         ← Citation metadata
+├── LICENSE                                                              ← Creative Commons Attribution 4.0 License
+└── README.md                                                            ← This file
 ```
 
 ---
 
 ## Dataset Description
 
-**Collection period:** August 1 – September 29, 2025  
-**Platform:** X (formerly Twitter)  
+**Collection period:** August 1 – September 29, 2025
+**Platform:** X (formerly Twitter)
 **Language:** Bahasa Indonesia
 
 | File | Description |
@@ -73,47 +75,62 @@ Indonesian-Protest-Network/
 
 ## Analytical Framework & Pipeline
 
-The notebooks in `data-analysis/` implement a sequential computational pipeline. Each notebook corresponds to a distinct methodological stage described in Section 3 of the manuscript.
+The notebooks in `analytical-notebook/` implement a sequential computational pipeline. Each notebook corresponds to a methodological stage described in Section 3 of the manuscript. Intermediate output files generated by earlier stages are required inputs for later stages, so the pipeline should be run in order.
 
-### Stage 1 - Thematic Modeling via BERTopic
-**Notebook:** `BERTopic: Linking Diffusion Depth to Topic Change`
+### Stage 1 — Thematic Modeling via BERTopic
+**Notebook:** `BERTopic Setup.ipynb`
 
-Identifies thematic structure using BERTopic with Indonesian sentence-BERT embeddings (`firqaaa/indo-sentence-bert-base`), UMAP dimensionality reduction, and HDBSCAN clustering. Produces 19 coherent topics with temporal distributions used to define the pre-shift (August 1–26) and post-shift (August 28–September 29) windows. Computes a composite diffusion score per narrative topic.
+Identifies thematic structure using BERTopic with Indonesian sentence-BERT embeddings (`firqaaa/indo-sentence-bert-base`), UMAP dimensionality reduction, and HDBSCAN clustering. Produces 19 coherent topics (plus an outlier category) with temporal distributions used to define the pre-shift (August 1–26) and post-shift (August 28–September 29) windows.
 
-### Stage 2 - Network Graph Construction
-**Notebook:** `Network Graph Construction`
+### Stage 2 — Linking Diffusion Depth to Topic Change
+**Notebook:** `BERTopic Linking Diffusion Depth to Topic Change.ipynb`
+
+Computes a composite diffusion score per narrative topic, linking BERTopic-assigned topics to the structural depth of their diffusion. Provides the topic-level inputs used later in the Excitation Index.
+
+### Stage 3 — Network Graph Construction
+**Notebook:** `Network Graph Construction.ipynb`
 
 Constructs a directed weighted graph where nodes represent accounts and edges represent retweets, quote tweets, and replies. Output: 11,426 nodes, 13,994 directed edges.
 
-### Stage 3 - Community Detection
-**Notebook:** `Community Detection`
+### Stage 4 — Community Detection
+**Notebook:** `Community Detection.ipynb`
 
 Applies the Louvain algorithm to detect community structure. Output: 1,667 communities, modularity = 0.7991.
 
-### Stage 4 - Social Penetration Metrics
-**Notebook:** `Social Penetration Metrics`
+### Stage 5 — Social Penetration Metrics
+**Notebook:** `Social Penetration Metrics.ipynb`
 
-Computes cross-community penetration metrics including community porosity, hop depth per cascade, and inter-community edge ratios across pre- and post-shift temporal windows.
+Computes cross-community penetration metrics including community porosity, hop depth per cascade, and inter-community edge ratios across the pre- and post-shift temporal windows.
 
-### Stage 5 - Excitation Effect & Narrative Shift Trigger (Steps 1–2)
-**Notebook:** `Excitation Effect & Narrative Shift Trigger (Steps 1–2)`
+### Stage 6 — Excitation Effect & Narrative Shift Trigger (Steps 1 and 2)
+**Notebook:** `Excitation Effect & Narrative Shift Trigger (Steps 1 and 2).ipynb`
 
-Reconstructs cascade sequences in chronological order using timestamped interaction events matched to BERTopic-assigned topics. Computes engagement velocity and temporal excitation patterns.
+Reconstructs cascade sequences in chronological order using timestamped interaction events matched to BERTopic-assigned topics. Computes engagement velocity, temporal excitation patterns, and the pre-shift versus post-shift cross-community proportion test reported in the manuscript.
 
-### Stage 6 - Excitation Effect & Narrative Shift Trigger (Steps 3–4)
-**Notebook:** `Excitation Effect & Narrative Shift Trigger (Steps 3–4)`
+### Stage 7 — Excitation Effect & Narrative Shift Trigger (Steps 3 and 4)
+**Notebook:** `Excitation Effect & Narrative Shift Trigger (Steps 3 and 4).ipynb`
 
-Performs statistical integration of cascade components and formally computes the Excitation Index (EI) as the unweighted mean of four z-scored indicators: mean diffusion score, maximum hop depth, mean hop depth, and post-shift median engagement per tweet.
+Performs statistical integration of cascade components and computes the Excitation Index (EI) as the unweighted mean of four z-scored indicators: mean diffusion score, maximum hop depth, mean hop depth, and post-shift median engagement per tweet.
 
-### Stage 7 - Actor Role Analysis
-**Notebook:** `Actor Role Analysis`
+### Stage 8 — Actor Role Analysis
+**Notebook:** `Actor Role Analysis.ipynb`
 
-Classifies each account into one of three structural roles: Attention Sink, Local Amplifier, or Diffusion Driver based on in-degree to out-degree ratio and cross-community edge count. Includes Spearman correlation between engagement and structural reach.
+Classifies each account into one of three structural roles, Attention Sink, Local Amplifier, or Diffusion Driver, based on the in-degree to out-degree ratio and the cross-community edge count.
 
-### Stage 8 - Cross-Community Penetration & Cognitive Fusion
-**Notebook:** `Cross-Community Penetration & Cognitive Fusion`
+### Stage 9 — Cross-Community Penetration & Cognitive Fusion
+**Notebook:** `Cross-Community Penetration & Cognitive Fusion.ipynb`
 
-Computes community porosity at paired temporal windows and the Cognitive Fusion Index (CFI) as the unweighted mean of four z-scored structural indicators: maximum hop depth, mean hop depth, post-shift porosity, and unique inter-community dyads. Includes Wilcoxon signed-rank test and CFI sensitivity analysis under four alternative weighting schemes.
+Computes community porosity at paired temporal windows and the Cognitive Fusion Index (CFI) as the unweighted mean of four z-scored structural indicators: maximum hop depth, mean hop depth, post-shift porosity, and unique inter-community dyads. Includes the Wilcoxon signed-rank test and the CFI sensitivity analysis under four alternative weighting schemes.
+
+### Stage 10 — Engagement vs Structural Reach (Figure 6)
+**Notebook:** `Fix Figure6 Engagement vs Structural Reach Final.ipynb`
+
+Tests the dissociation between platform visibility and structural reach across account types. Computes the Spearman correlation between cumulative view count and cross-community reach on accounts with nonzero view counts, and produces Figure 6.
+
+### Stage 11 — Engagement Metrics per Narrative
+**Notebook:** `Fix Analysis Novelty3 Engagement per Narrative.ipynb`
+
+Compares engagement across BERTopic-validated narratives. Computes per-narrative descriptive engagement distributions, the Kruskal-Wallis test, and pairwise Mann-Whitney U tests with Bonferroni correction, supporting the engagement findings and Table S1.
 
 ---
 
@@ -124,7 +141,7 @@ All notebooks are designed to run in [Google Colab](https://colab.research.googl
 1. Clone or download this repository.
 2. Upload the target notebook to your Google Colab workspace.
 3. When prompted, upload `main-data/raw-data-hashed.csv` as the input data file.
-4. Execute cells sequentially. Intermediate output files generated by earlier stages are required inputs for later stages; run the pipeline in order (Stages 1–8).
+4. Execute cells sequentially. Intermediate output files generated by earlier stages are required inputs for later stages; run the pipeline in order (Stages 1–11).
 
 **Key dependencies:**
 
