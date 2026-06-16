@@ -192,7 +192,7 @@ Supplementary analysis demonstrating that the Affan Kurniawan narrative produced
 ### Stage 11 — Supplementary: Figure 6 (Engagement vs. Structural Reach)
 **Notebook:** `Fix Figure6 Engagement vs Structural Reach Final.ipynb`
 
-Produces Figure 6 (the dissociation between platform engagement and cross-community structural reach across account types) and computes the Spearman correlation between cumulative view count and cross-community edges (ρ = 0.232, p = 8.73 × 10⁻⁷⁹, n = 6,365). This notebook incorporates the post-relabeling corrected account classification file.
+Produces Figure 3 and computes the Spearman correlation between cumulative view count and cross-community edges (ρ = 0.232, p = 8.73 × 10⁻⁷⁹, n = 6,365). This notebook incorporates the post-relabeling corrected account classification file.
 
 ---
 
