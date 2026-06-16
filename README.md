@@ -30,20 +30,20 @@ The dataset provided in this repository has been processed to comply with platfo
 Indonesian-Protest-Network/
 │
 ├── main-data/
-│   └── raw-data-hashed.csv                                                     ← Anonymized raw tweet dataset
+│   └── raw-data-hashed.csv                                                      ← Anonymized raw tweet dataset
 │
 ├── analytical-notebook/
 │   ├── BERTopic_Setup.ipynb                                                     ← Topic modeling on protest tweets
-│   ├── BERTopic_Linking_Diffusion_Depth_to_Topic_Change.ipynb                  ← Composite diffusion score per topic
+│   ├── BERTopic_Linking_Diffusion_Depth_to_Topic_Change.ipynb                   ← Composite diffusion score per topic
 │   ├── Network_Graph_Construction.ipynb                                         ← Directed interaction network construction
 │   ├── Community_Detection.ipynb                                                ← Louvain community detection
 │   ├── Social_Penetration_Metrics.ipynb                                         ← Cross-community penetration metrics
-│   ├── Excitation_Effect___Narrative_Shift_Trigger__Steps_1_and_2_.ipynb       ← Temporal excitation & engagement velocity
-│   ├── Excitation_Effect___Narrative_Shift_Trigger__Steps_3_and_4_.ipynb       ← Statistical integration & cascade trigger
+│   ├── Excitation_Effect___Narrative_Shift_Trigger__Steps_1_and_2_.ipynb        ← Temporal excitation & engagement velocity
+│   ├── Excitation_Effect___Narrative_Shift_Trigger__Steps_3_and_4_.ipynb        ← Statistical integration & cascade trigger
 │   ├── Actor_Role_Analysis.ipynb                                                ← Actor role classification (sink vs driver)
-│   ├── Cross-Community_Penetration___Cognitive_Fusion.ipynb                    ← Community porosity & CFI computation
-│   ├── Fix_Analysis_Novelty3_Engagement_per_Narrative__3_.ipynb                ← Supplementary engagement comparison per narrative
-│   └── Fix_Figure6_Engagement_vs_Structural_Reach_Final.ipynb                  ← Figure 6: engagement vs structural reach (post-relabeling)
+│   ├── Cross-Community_Penetration___Cognitive_Fusion.ipynb                     ← Community porosity & CFI computation
+│   ├── Fix_Analysis_Novelty3_Engagement_per_Narrative__3_.ipynb                 ← Supplementary engagement comparison per narrative
+│   └── Fix_Figure6_Engagement_vs_Structural_Reach_Final.ipynb                   ← Figure 6: engagement vs structural reach (post-relabeling)
 │
 ├── derived-data/
 │   ├── cognitive_fusion_index.csv                                               ← CFI scores and z-scores per narrative
