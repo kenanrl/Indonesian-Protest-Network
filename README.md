@@ -33,42 +33,42 @@ Indonesian-Protest-Network/
 │   └── raw-data-hashed.csv                                                      ← Anonymized raw tweet dataset
 │
 ├── analytical-notebook/
-│   ├── BERTopic_Setup.ipynb                                                     ← Topic modeling on protest tweets
-│   ├── BERTopic_Linking_Diffusion_Depth_to_Topic_Change.ipynb                   ← Composite diffusion score per topic
-│   ├── Network_Graph_Construction.ipynb                                         ← Directed interaction network construction
-│   ├── Community_Detection.ipynb                                                ← Louvain community detection
-│   ├── Social_Penetration_Metrics.ipynb                                         ← Cross-community penetration metrics
-│   ├── Excitation_Effect___Narrative_Shift_Trigger__Steps_1_and_2_.ipynb        ← Temporal excitation & engagement velocity
-│   ├── Excitation_Effect___Narrative_Shift_Trigger__Steps_3_and_4_.ipynb        ← Statistical integration & cascade trigger
-│   ├── Actor_Role_Analysis.ipynb                                                ← Actor role classification (sink vs driver)
-│   ├── Cross-Community_Penetration___Cognitive_Fusion.ipynb                     ← Community porosity & CFI computation
-│   ├── Fix_Analysis_Novelty3_Engagement_per_Narrative__3_.ipynb                 ← Supplementary engagement comparison per narrative
-│   └── Fix_Figure6_Engagement_vs_Structural_Reach_Final.ipynb                   ← Figure 6: engagement vs structural reach (post-relabeling)
+│   ├── BERTopic Setup.ipynb                                                     ← Topic modeling on protest tweets
+│   ├── BERTopic Linking Diffusion Depth to Topic Change.ipynb                   ← Composite diffusion score per topic
+│   ├── Network Graph_Construction.ipynb                                         ← Directed interaction network construction
+│   ├── Community Detection.ipynb                                                ← Louvain community detection
+│   ├── Social Penetration Metrics.ipynb                                         ← Cross-community penetration metrics
+│   ├── Excitation Effect Narrative Shift Trigger Steps 1 and 2.ipynb            ← Temporal excitation & engagement velocity
+│   ├── Excitation Effect Narrative Shift Trigger Steps 3 and 4.ipynb            ← Statistical integration & cascade trigger
+│   ├── Actor Role Analysis.ipynb                                                ← Actor role classification (sink vs driver)
+│   ├── Cross-Community Penetration Cognitive Fusion.ipynb                       ← Community porosity & CFI computation
+│   ├── Fix Analysis Novelty3 Engagement per Narrative 3.ipynb                   ← Supplementary engagement comparison per narrative
+│   └── Fix Figure6 Engagement vs Structural Reach_Final.ipynb                   ← Figure 6: engagement vs structural reach (post-relabeling)
 │
 ├── derived-data/
-│   ├── cognitive_fusion_index.csv                                               ← CFI scores and z-scores per narrative
-│   ├── community_porosity.csv                                                   ← Community porosity pre- and post-shift
-│   ├── descriptive_engagement_per_narrative.csv                                 ← Median view counts per narrative (Table S1)
-│   ├── excitation_index2.csv                                                    ← Excitation Index scores per narrative
-│   ├── excitation_integrated_table2.csv                                         ← Integrated EI component table
-│   ├── kruskal_wallis_engagement.csv                                            ← Kruskal-Wallis engagement test results
-│   ├── meta_network_per_narrative.csv                                           ← Meta-network community connectivity per narrative
-│   ├── pairwise_mannwhitney_engagement.csv                                      ← Pairwise Mann-Whitney U test results
-│   ├── penetration_by_narrative.csv                                             ← Cross-community edges and reach per narrative
-│   ├── penetration_by_topic.csv                                                 ← Cross-community penetration per BERTopic topic
+│   ├── cognitive fusion_index.csv                                               ← CFI scores and z-scores per narrative
+│   ├── community porosity.csv                                                   ← Community porosity pre- and post-shift
+│   ├── descriptive engagement per narrative.csv                                 ← Median view counts per narrative (Table S1)
+│   ├── excitation index.csv                                                     ← Excitation Index scores per narrative
+│   ├── excitation integrated table.csv                                          ← Integrated EI component table
+│   ├── kruskal wallis engagement.csv                                            ← Kruskal-Wallis engagement test results
+│   ├── meta network per narrative.csv                                           ← Meta-network community connectivity per narrative
+│   ├── pairwise mannwhitney engagement.csv                                      ← Pairwise Mann-Whitney U test results
+│   ├── penetration by narrative.csv                                             ← Cross-community edges and reach per narrative
+│   ├── penetration by topic.csv                                                 ← Cross-community penetration per BERTopic topic
 │   │
 │   └── hashed/
-│       ├── Data_bert_with_topics2_hashed.csv                                    ← Tweets with BERTopic topic assignments
-│       ├── Data_diffusion_analysis2_hashed.csv                                  ← Tweets with diffusion scores and narrative labels
-│       ├── Data_with_community3_hashed.csv                                      ← Tweets with community assignments
-│       ├── actor_engagement_structural_merged_hashed.csv                        ← Per-account engagement and structural reach merged
-│       ├── actor_roles_classification_hashed.csv                                ← Structural role classification per account
-│       ├── affan_community_propagation_fixed2_hashed.csv                        ← First-mover accounts per community (Affan cascade)
-│       ├── cascade_hop_levels_hashed.csv                                        ← Hop-level assignments per account in cascade
-│       ├── community_summary_hashed.csv                                         ← Community-level summary statistics
-│       ├── network_edges_hashed.csv                                             ← Directed edge list with interaction metadata
-│       ├── network_nodes_hashed.xlsx                                            ← Node list with degree and account type
-│       └── network_nodes_with_community3_hashed.csv                             ← Node list with Louvain community assignments
+│       ├── Data bert with topics hashed.csv                                     ← Tweets with BERTopic topic assignments
+│       ├── Data diffusion analysis hashed.csv                                   ← Tweets with diffusion scores and narrative labels
+│       ├── Data with community3_hashed.csv                                      ← Tweets with community assignments
+│       ├── actor engagement structural merged hashed.csv                        ← Per-account engagement and structural reach merged
+│       ├── actor roles classification hashed.csv                                ← Structural role classification per account
+│       ├── affan_community propagation fixed hashed.csv                         ← First-mover accounts per community (Affan cascade)
+│       ├── cascade hop levels hashed.csv                                        ← Hop-level assignments per account in cascade
+│       ├── community summary hashed.csv                                         ← Community-level summary statistics
+│       ├── network edges hashed.csv                                             ← Directed edge list with interaction metadata
+│       ├── network nodes hashed.xlsx                                            ← Node list with degree and account type
+│       └── network nodes with community hashed.csv                              ← Node list with Louvain community assignments
 │
 ├── CITATION.cff                                                                 ← Citation metadata
 ├── LICENSE                                                                      ← Creative Commons Attribution 4.0 License
