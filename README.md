@@ -48,7 +48,7 @@ Indonesian-Protest-Network/
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
 │   ├── community porosity.csv                                                   ← Community porosity pre- and post-shift
-│   ├── descriptive engagement per narrative.csv                                 ← Median view counts per narrative (Table S1)
+│   ├── descriptive engagement per narrative.csv                                 ← Median view counts per narrative
 │   ├── excitation index.csv                                                     ← Excitation Index scores per narrative
 │   ├── excitation integrated table.csv                                          ← Integrated EI component table
 │   ├── kruskal wallis engagement.csv                                            ← Kruskal-Wallis engagement test results
@@ -100,22 +100,22 @@ Indonesian-Protest-Network/
 
 Files in `derived-data/` contain aggregate-level outputs with no account identifiers. Files in `derived-data/hashed/` contain account-level outputs where usernames remain present in hashed form.
 
-#### derived-data/ (aggregate, no identifiers)
+#### derived-data/ 
 
 | File | Description |
 |---|---|
-| `cognitive fusion index.csv` | CFI scores and component z-scores for all seven narrative categories (Table 5) |
+| `cognitive fusion index.csv` | CFI scores and component z-scores for all seven narrative categories |
 | `community porosity.csv` | Community porosity values per community per temporal phase (pre- and post-shift) |
-| `descriptive engagement per narrative.csv` | Median view counts and tweet counts per narrative (Table S1) |
-| `excitation index.csv` | Excitation Index scores and component values per narrative (Table 4) |
+| `descriptive engagement per narrative.csv` | Median view counts and tweet counts per narrative |
+| `excitation index.csv` | Excitation Index scores and component values per narrative |
 | `excitation integrated table.csv` | Full integrated EI component table including post-shift engagement per tweet |
 | `kruskal wallis engagement.csv` | Kruskal-Wallis test results for engagement metric comparisons across narratives |
-| `meta network per narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length (Table S4) |
+| `meta network per narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length |
 | `pairwise mannwhitney engagement.csv` | Pairwise Mann-Whitney U test results with Bonferroni-corrected p-values and effect sizes |
-| `penetration by narrative.csv` | Cross-community edge counts, maximum hop depth, and communities reached per narrative (Table 4) |
+| `penetration by narrative.csv` | Cross-community edge counts, maximum hop depth, and communities reached per narrative |
 | `penetration by topic.csv` | Cross-community penetration statistics per individual BERTopic topic prior to narrative consolidation |
 
-#### derived-data/hashed/ (account-level, usernames hashed)
+#### derived-data/hashed/
 
 | File | Description |
 |---|---|
