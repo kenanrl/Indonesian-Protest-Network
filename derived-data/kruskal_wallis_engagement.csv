@@ -1,0 +1,6 @@
+metric,H_statistic,p_value,significant
+retweet_count,243.561,0.0,*** p<0.001
+reply_count,203.712,0.0,*** p<0.001
+quote_count,157.394,0.0,*** p<0.001
+view_count,370.287,0.0,*** p<0.001
+favorite_count,221.968,0.0,*** p<0.001

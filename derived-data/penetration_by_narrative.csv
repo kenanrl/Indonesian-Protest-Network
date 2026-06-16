@@ -1,0 +1,8 @@
+narrative,total_tweets,unique_users,communities_reached,reach_pct,communities_per_user,cross_ratio,cross_edges,total_edges,max_hop,avg_hop,community_nodes,community_edges
+Demo & DPR,2482,1998,683,41.0,0.342,6.4,136,2134,5,2.27,683,83
+Kekerasan Aparat,2276,1674,540,32.4,0.323,10.9,225,2055,4,1.93,541,118
+Gerakan/Hashtag,2356,1064,253,15.2,0.238,20.5,597,2916,3,1.83,255,166
+Ekonomi Rakyat,1277,995,154,9.2,0.155,14.5,155,1072,4,2.0,154,87
+Politik & Tuntutan,1437,1059,122,7.3,0.115,24.7,396,1602,3,1.87,123,98
+Affan Kurniawan,743,479,102,6.1,0.213,13.7,58,422,7,2.84,102,37
+Keamanan & Respons,206,158,68,4.1,0.43,18.4,26,141,5,2.63,70,23

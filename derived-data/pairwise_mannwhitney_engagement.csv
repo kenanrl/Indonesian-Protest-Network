@@ -1,0 +1,106 @@
+metric,narrative_1,narrative_2,n1,n2,U_statistic,p_value_raw,p_value_bonferroni,alpha_bonferroni,effect_size_r,significant_raw,significant_bonferroni
+retweet_count,Affan Kurniawan,Demo & DPR,714,1614,707654.0,8.01585e-35,8.41665e-33,0.000476,-0.228,***,sig
+retweet_count,Affan Kurniawan,Ekonomi Rakyat,714,1070,464934.0,1.81673e-25,1.90757e-23,0.000476,-0.217,***,sig
+retweet_count,Affan Kurniawan,Gerakan/Hashtag,714,2043,858208.0,6.69013e-21,7.02464e-19,0.000476,-0.177,***,sig
+retweet_count,Affan Kurniawan,Keamanan & Respons,714,179,68863.0,0.0590562,1.0,0.000476,-0.078,n.s.,n.s.
+retweet_count,Affan Kurniawan,Kekerasan Aparat,714,1932,851064.0,5.51076e-41,5.7863e-39,0.000476,-0.234,***,sig
+retweet_count,Affan Kurniawan,Politik & Tuntutan,714,958,394877.5,8.2579e-12,8.6708e-10,0.000476,-0.155,***,sig
+retweet_count,Demo & DPR,Ekonomi Rakyat,1614,1070,855136.0,0.49032,1.0,0.000476,0.01,n.s.,n.s.
+retweet_count,Demo & DPR,Gerakan/Hashtag,1614,2043,1559107.0,1.89046e-05,0.00198498,0.000476,0.054,***,sig
+retweet_count,Demo & DPR,Keamanan & Respons,1614,179,122638.5,1.74753e-07,1.83491e-05,0.000476,0.151,***,sig
+retweet_count,Demo & DPR,Kekerasan Aparat,1614,1932,1575945.5,0.353094,1.0,0.000476,-0.011,n.s.,n.s.
+retweet_count,Demo & DPR,Politik & Tuntutan,1614,958,714856.5,1.09693e-06,0.000115178,0.000476,0.075,***,sig
+retweet_count,Ekonomi Rakyat,Gerakan/Hashtag,1070,2043,1044705.5,0.00259307,0.272272,0.000476,0.044,**,n.s.
+retweet_count,Ekonomi Rakyat,Keamanan & Respons,1070,179,82321.5,4.7197e-06,0.000495569,0.000476,0.14,***,sig
+retweet_count,Ekonomi Rakyat,Kekerasan Aparat,1070,1932,1054464.0,0.126637,1.0,0.000476,-0.02,n.s.,n.s.
+retweet_count,Ekonomi Rakyat,Politik & Tuntutan,1070,958,479146.0,0.000170983,0.0179532,0.000476,0.065,***,sig
+retweet_count,Gerakan/Hashtag,Keamanan & Respons,2043,179,164805.5,0.00190006,0.199506,0.000476,0.099,**,n.s.
+retweet_count,Gerakan/Hashtag,Kekerasan Aparat,2043,1932,2100153.0,6.1548e-08,6.46254e-06,0.000476,-0.064,***,sig
+retweet_count,Gerakan/Hashtag,Politik & Tuntutan,2043,958,957591.0,0.17779,1.0,0.000476,0.021,n.s.,n.s.
+retweet_count,Keamanan & Respons,Kekerasan Aparat,179,1932,200369.5,8.19076e-09,8.60029e-07,0.000476,-0.159,***,sig
+retweet_count,Keamanan & Respons,Politik & Tuntutan,179,958,92335.5,0.026355,1.0,0.000476,-0.077,*,n.s.
+retweet_count,Kekerasan Aparat,Politik & Tuntutan,1932,958,847095.0,5.84276e-09,6.1349e-07,0.000476,0.085,***,sig
+reply_count,Affan Kurniawan,Demo & DPR,714,1614,643858.0,3.51129e-08,3.68686e-06,0.000476,-0.117,***,sig
+reply_count,Affan Kurniawan,Ekonomi Rakyat,714,1070,461603.0,2.43087e-22,2.55241e-20,0.000476,-0.208,***,sig
+reply_count,Affan Kurniawan,Gerakan/Hashtag,714,2043,881703.5,8.78514e-30,9.2244e-28,0.000476,-0.209,***,sig
+reply_count,Affan Kurniawan,Keamanan & Respons,714,179,75752.0,5.15483e-06,0.000541257,0.000476,-0.185,***,sig
+reply_count,Affan Kurniawan,Kekerasan Aparat,714,1932,833867.5,5.23076e-29,5.4923e-27,0.000476,-0.209,***,sig
+reply_count,Affan Kurniawan,Politik & Tuntutan,714,958,394523.5,1.78369e-11,1.87287e-09,0.000476,-0.154,***,sig
+reply_count,Demo & DPR,Ekonomi Rakyat,1614,1070,954665.0,7.72349e-10,8.10966e-08,0.000476,-0.106,***,sig
+reply_count,Demo & DPR,Gerakan/Hashtag,1614,2043,1824517.5,3.5931e-14,3.77276e-12,0.000476,-0.107,***,sig
+reply_count,Demo & DPR,Keamanan & Respons,1614,179,155975.0,0.0262789,1.0,0.000476,-0.08,*,n.s.
+reply_count,Demo & DPR,Kekerasan Aparat,1614,1932,1725359.0,9.87275e-14,1.03664e-11,0.000476,-0.107,***,sig
+reply_count,Demo & DPR,Politik & Tuntutan,1614,958,810889.0,0.00746501,0.783826,0.000476,-0.049,**,n.s.
+reply_count,Ekonomi Rakyat,Gerakan/Hashtag,1070,2043,1095414.5,0.879406,1.0,0.000476,-0.002,n.s.,n.s.
+reply_count,Ekonomi Rakyat,Keamanan & Respons,1070,179,93351.5,0.424028,1.0,0.000476,0.025,n.s.,n.s.
+reply_count,Ekonomi Rakyat,Kekerasan Aparat,1070,1932,1034441.5,0.957018,1.0,0.000476,-0.001,n.s.,n.s.
+reply_count,Ekonomi Rakyat,Politik & Tuntutan,1070,958,485860.0,0.00388295,0.40771,0.000476,0.052,**,n.s.
+reply_count,Gerakan/Hashtag,Keamanan & Respons,2043,179,177890.5,0.367352,1.0,0.000476,0.027,n.s.,n.s.
+reply_count,Gerakan/Hashtag,Kekerasan Aparat,2043,1932,1970486.0,0.899324,1.0,0.000476,0.002,n.s.,n.s.
+reply_count,Gerakan/Hashtag,Politik & Tuntutan,2043,958,925833.0,0.000529979,0.0556478,0.000476,0.054,***,n.s.
+reply_count,Keamanan & Respons,Kekerasan Aparat,179,1932,177407.5,0.391886,1.0,0.000476,-0.026,n.s.,n.s.
+reply_count,Keamanan & Respons,Politik & Tuntutan,179,958,83359.0,0.417778,1.0,0.000476,0.028,n.s.,n.s.
+reply_count,Kekerasan Aparat,Politik & Tuntutan,1932,958,876700.0,0.000853207,0.0895867,0.000476,0.053,***,n.s.
+quote_count,Affan Kurniawan,Demo & DPR,714,1614,645551.0,8.83455e-20,9.27628e-18,0.000476,-0.12,***,sig
+quote_count,Affan Kurniawan,Ekonomi Rakyat,714,1070,431889.0,2.21041e-19,2.32093e-17,0.000476,-0.131,***,sig
+quote_count,Affan Kurniawan,Gerakan/Hashtag,714,2043,810299.0,6.03323e-18,6.3349e-16,0.000476,-0.111,***,sig
+quote_count,Affan Kurniawan,Keamanan & Respons,714,179,70313.5,0.00105796,0.111086,0.000476,-0.1,**,n.s.
+quote_count,Affan Kurniawan,Kekerasan Aparat,714,1932,779833.0,3.01143e-27,3.162e-25,0.000476,-0.131,***,sig
+quote_count,Affan Kurniawan,Politik & Tuntutan,714,958,375835.0,1.00602e-09,1.05632e-07,0.000476,-0.099,***,sig
+quote_count,Demo & DPR,Ekonomi Rakyat,1614,1070,872944.0,0.221062,1.0,0.000476,-0.011,n.s.,n.s.
+quote_count,Demo & DPR,Gerakan/Hashtag,1614,2043,1633270.5,0.251193,1.0,0.000476,0.009,n.s.,n.s.
+quote_count,Demo & DPR,Keamanan & Respons,1614,179,141598.5,0.294307,1.0,0.000476,0.02,n.s.,n.s.
+quote_count,Demo & DPR,Kekerasan Aparat,1614,1932,1576253.0,0.145175,1.0,0.000476,-0.011,n.s.,n.s.
+quote_count,Demo & DPR,Politik & Tuntutan,1614,958,756920.0,0.0395235,1.0,0.000476,0.021,*,n.s.
+quote_count,Ekonomi Rakyat,Gerakan/Hashtag,1070,2043,1070907.5,0.0253365,1.0,0.000476,0.02,*,n.s.
+quote_count,Ekonomi Rakyat,Keamanan & Respons,1070,179,92836.5,0.088524,1.0,0.000476,0.031,n.s.,n.s.
+quote_count,Ekonomi Rakyat,Kekerasan Aparat,1070,1932,1033653.0,0.996911,1.0,0.000476,-0.0,n.s.,n.s.
+quote_count,Ekonomi Rakyat,Politik & Tuntutan,1070,958,496253.0,0.00323671,0.339855,0.000476,0.032,**,n.s.
+quote_count,Gerakan/Hashtag,Keamanan & Respons,2043,179,180937.0,0.5968,1.0,0.000476,0.01,n.s.,n.s.
+quote_count,Gerakan/Hashtag,Kekerasan Aparat,2043,1932,2013490.5,0.00643274,0.675438,0.000476,-0.02,**,n.s.
+quote_count,Gerakan/Hashtag,Politik & Tuntutan,2043,958,967178.5,0.248388,1.0,0.000476,0.012,n.s.,n.s.
+quote_count,Keamanan & Respons,Kekerasan Aparat,179,1932,178205.0,0.0731196,1.0,0.000476,-0.031,n.s.,n.s.
+quote_count,Keamanan & Respons,Politik & Tuntutan,179,958,85639.0,0.957117,1.0,0.000476,0.001,n.s.,n.s.
+quote_count,Kekerasan Aparat,Politik & Tuntutan,1932,958,896021.0,0.000594164,0.0623872,0.000476,0.032,***,n.s.
+view_count,Affan Kurniawan,Demo & DPR,714,1614,757013.0,1.18711e-33,1.24647e-31,0.000476,-0.314,***,sig
+view_count,Affan Kurniawan,Ekonomi Rakyat,714,1070,546010.0,2.02813e-53,2.12953e-51,0.000476,-0.429,***,sig
+view_count,Affan Kurniawan,Gerakan/Hashtag,714,2043,1007275.5,4.88144e-52,5.12552e-50,0.000476,-0.381,***,sig
+view_count,Affan Kurniawan,Keamanan & Respons,714,179,70773.0,0.0259977,1.0,0.000476,-0.108,*,n.s.
+view_count,Affan Kurniawan,Kekerasan Aparat,714,1932,961194.5,1.30363e-54,1.36881e-52,0.000476,-0.394,***,sig
+view_count,Affan Kurniawan,Politik & Tuntutan,714,958,435334.0,1.21197e-21,1.27257e-19,0.000476,-0.273,***,sig
+view_count,Demo & DPR,Ekonomi Rakyat,1614,1070,960466.0,8.08323e-07,8.48739e-05,0.000476,-0.112,***,sig
+view_count,Demo & DPR,Gerakan/Hashtag,1614,2043,1733498.0,0.00748107,0.785512,0.000476,-0.051,**,n.s.
+view_count,Demo & DPR,Keamanan & Respons,1614,179,110540.5,2.46819e-07,2.5916e-05,0.000476,0.235,***,sig
+view_count,Demo & DPR,Kekerasan Aparat,1614,1932,1684354.0,3.70854e-05,0.00389397,0.000476,-0.08,***,sig
+view_count,Demo & DPR,Politik & Tuntutan,1614,958,727031.0,0.0113912,1.0,0.000476,0.06,*,n.s.
+view_count,Ekonomi Rakyat,Gerakan/Hashtag,1070,2043,1006539.0,0.000282996,0.0297145,0.000476,0.079,***,sig
+view_count,Ekonomi Rakyat,Keamanan & Respons,1070,179,60153.0,1.55058e-15,1.62811e-13,0.000476,0.372,***,sig
+view_count,Ekonomi Rakyat,Kekerasan Aparat,1070,1932,1004129.0,0.194769,1.0,0.000476,0.029,n.s.,n.s.
+view_count,Ekonomi Rakyat,Politik & Tuntutan,1070,958,412960.0,3.93269e-14,4.12932e-12,0.000476,0.194,***,sig
+view_count,Gerakan/Hashtag,Keamanan & Respons,2043,179,123656.0,6.40226e-13,6.72238e-11,0.000476,0.324,***,sig
+view_count,Gerakan/Hashtag,Kekerasan Aparat,2043,1932,2062406.5,0.0139938,1.0,0.000476,-0.045,*,n.s.
+view_count,Gerakan/Hashtag,Politik & Tuntutan,2043,958,853183.0,1.44624e-08,1.51855e-06,0.000476,0.128,***,sig
+view_count,Keamanan & Respons,Kekerasan Aparat,179,1932,229775.5,3.13603e-13,3.29283e-11,0.000476,-0.329,***,sig
+view_count,Keamanan & Respons,Politik & Tuntutan,179,958,102862.5,2.17977e-05,0.00228876,0.000476,-0.2,***,sig
+view_count,Kekerasan Aparat,Politik & Tuntutan,1932,958,780473.0,6.66691e-12,7.00025e-10,0.000476,0.157,***,sig
+favorite_count,Affan Kurniawan,Demo & DPR,714,1614,715230.0,3.10015e-25,3.25516e-23,0.000476,-0.241,***,sig
+favorite_count,Affan Kurniawan,Ekonomi Rakyat,714,1070,478332.5,1.22694e-23,1.28828e-21,0.000476,-0.252,***,sig
+favorite_count,Affan Kurniawan,Gerakan/Hashtag,714,2043,857224.0,4.27521e-14,4.48897e-12,0.000476,-0.175,***,sig
+favorite_count,Affan Kurniawan,Keamanan & Respons,714,179,69592.5,0.0524267,1.0,0.000476,-0.089,n.s.,n.s.
+favorite_count,Affan Kurniawan,Kekerasan Aparat,714,1932,879466.0,1.45428e-35,1.527e-33,0.000476,-0.275,***,sig
+favorite_count,Affan Kurniawan,Politik & Tuntutan,714,958,395580.0,4.09901e-09,4.30396e-07,0.000476,-0.157,***,sig
+favorite_count,Demo & DPR,Ekonomi Rakyat,1614,1070,874727.0,0.503101,1.0,0.000476,-0.013,n.s.,n.s.
+favorite_count,Demo & DPR,Gerakan/Hashtag,1614,2043,1507209.5,5.39512e-07,5.66487e-05,0.000476,0.086,***,sig
+favorite_count,Demo & DPR,Keamanan & Respons,1614,179,121354.5,5.04533e-05,0.0052976,0.000476,0.16,***,sig
+favorite_count,Demo & DPR,Kekerasan Aparat,1614,1932,1622812.5,0.0126329,1.0,0.000476,-0.041,*,n.s.
+favorite_count,Demo & DPR,Politik & Tuntutan,1614,958,698403.5,3.19236e-06,0.000335198,0.000476,0.097,***,sig
+favorite_count,Ekonomi Rakyat,Gerakan/Hashtag,1070,2043,984177.5,3.1232e-07,3.27936e-05,0.000476,0.1,***,sig
+favorite_count,Ekonomi Rakyat,Keamanan & Respons,1070,179,79292.5,1.97128e-05,0.00206984,0.000476,0.172,***,sig
+favorite_count,Ekonomi Rakyat,Kekerasan Aparat,1070,1932,1062333.0,0.130381,1.0,0.000476,-0.028,n.s.,n.s.
+favorite_count,Ekonomi Rakyat,Politik & Tuntutan,1070,958,456155.0,1.22303e-06,0.000128418,0.000476,0.11,***,sig
+favorite_count,Gerakan/Hashtag,Keamanan & Respons,2043,179,167668.0,0.0435238,1.0,0.000476,0.083,*,n.s.
+favorite_count,Gerakan/Hashtag,Kekerasan Aparat,2043,1932,2227914.0,1.00746e-15,1.05783e-13,0.000476,-0.129,***,sig
+favorite_count,Gerakan/Hashtag,Politik & Tuntutan,2043,958,965812.5,0.526464,1.0,0.000476,0.013,n.s.,n.s.
+favorite_count,Keamanan & Respons,Kekerasan Aparat,179,1932,207313.0,1.48465e-07,1.55888e-05,0.000476,-0.199,***,sig
+favorite_count,Keamanan & Respons,Politik & Tuntutan,179,958,91557.0,0.115648,1.0,0.000476,-0.068,n.s.,n.s.
+favorite_count,Kekerasan Aparat,Politik & Tuntutan,1932,958,797921.0,2.31314e-12,2.4288e-10,0.000476,0.138,***,sig

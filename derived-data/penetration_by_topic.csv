@@ -1,0 +1,21 @@
+topic,topic_label,total_tweets,unique_users,communities_reached,reach_pct,communities_per_user
+0,-1 | demo | rakyat | dpr,2218,1768,577,34.6,0.326
+-1,Outlier,3471,2455,510,30.6,0.208
+6,5 | affan | kurniawan | almarhum,714,599,298,17.9,0.497
+1,0 | demo | dpr | gedung,1631,764,194,11.6,0.254
+3,2 | prabowo | dpr | presiden,916,586,159,9.5,0.271
+7,6 | cops | 1312 | bastard,363,342,156,9.4,0.456
+4,3 | polisi | polisipembunuh | polisipembunuhrakyat,1177,993,153,9.2,0.154
+2,1 | indonesiagelap | resetindonesia | indonesia,1437,1059,122,7.3,0.115
+5,4 | rakyat | tuntutan | pajak,743,479,102,6.1,0.213
+12,11 | anjing | polisi | 1312,152,147,98,5.9,0.667
+10,9 | stay | safe | jaga,112,105,69,4.1,0.657
+8,7 | 1312 | pembunuh | forever,525,259,59,3.5,0.228
+9,8 | bubarkandprsontoloyo | berlakukanhukumanmati | bubarkandpr,153,108,56,3.4,0.519
+11,10 | temen | demo | 1312,154,133,56,3.4,0.421
+13,12 | demo | 1312 | dpr,129,124,56,3.4,0.452
+14,13 | 1312 | medis | mata,198,117,51,3.1,0.436
+17,16 | 80 | indonesia | indonesiagelap,48,46,23,1.4,0.5
+18,17 | bendera | takut | pasang,5,5,5,0.3,1.0
+16,15 | stopbayarpajak | bubarkandpr | orang,100,3,3,0.2,1.0
+15,14 | adilijokowi | indonesiagelap | organisasi,2,2,2,0.1,1.0
