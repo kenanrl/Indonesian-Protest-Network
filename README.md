@@ -35,7 +35,7 @@ Indonesian-Protest-Network/
 ├── analytical-notebook/
 │   ├── BERTopic Setup.ipynb                                                     ← Topic modeling on protest tweets
 │   ├── BERTopic Linking Diffusion Depth to Topic Change.ipynb                   ← Composite diffusion score per topic
-│   ├── Network Graph_Construction.ipynb                                         ← Directed interaction network construction
+│   ├── Network Graph Construction.ipynb                                         ← Directed interaction network construction
 │   ├── Community Detection.ipynb                                                ← Louvain community detection
 │   ├── Social Penetration Metrics.ipynb                                         ← Cross-community penetration metrics
 │   ├── Excitation Effect Narrative Shift Trigger Steps 1 and 2.ipynb            ← Temporal excitation & engagement velocity
@@ -43,10 +43,10 @@ Indonesian-Protest-Network/
 │   ├── Actor Role Analysis.ipynb                                                ← Actor role classification (sink vs driver)
 │   ├── Cross-Community Penetration Cognitive Fusion.ipynb                       ← Community porosity & CFI computation
 │   ├── Fix Analysis Novelty3 Engagement per Narrative 3.ipynb                   ← Supplementary engagement comparison per narrative
-│   └── Fix Figure6 Engagement vs Structural Reach_Final.ipynb                   ← Figure 6: engagement vs structural reach (post-relabeling)
+│   └── Fix Figure6 Engagement vs Structural Reach Final.ipynb                   ← Figure 6: engagement vs structural reach (post-relabeling)
 │
 ├── derived-data/
-│   ├── cognitive fusion_index.csv                                               ← CFI scores and z-scores per narrative
+│   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
 │   ├── community porosity.csv                                                   ← Community porosity pre- and post-shift
 │   ├── descriptive engagement per narrative.csv                                 ← Median view counts per narrative (Table S1)
 │   ├── excitation index.csv                                                     ← Excitation Index scores per narrative
@@ -60,10 +60,10 @@ Indonesian-Protest-Network/
 │   └── hashed/
 │       ├── Data bert with topics hashed.csv                                     ← Tweets with BERTopic topic assignments
 │       ├── Data diffusion analysis hashed.csv                                   ← Tweets with diffusion scores and narrative labels
-│       ├── Data with community3_hashed.csv                                      ← Tweets with community assignments
+│       ├── Data with community hashed.csv                                       ← Tweets with community assignments
 │       ├── actor engagement structural merged hashed.csv                        ← Per-account engagement and structural reach merged
 │       ├── actor roles classification hashed.csv                                ← Structural role classification per account
-│       ├── affan_community propagation fixed hashed.csv                         ← First-mover accounts per community (Affan cascade)
+│       ├── affan community propagation fixed hashed.csv                         ← First-mover accounts per community (Affan cascade)
 │       ├── cascade hop levels hashed.csv                                        ← Hop-level assignments per account in cascade
 │       ├── community summary hashed.csv                                         ← Community-level summary statistics
 │       ├── network edges hashed.csv                                             ← Directed edge list with interaction metadata
@@ -104,32 +104,32 @@ Files in `derived-data/` contain aggregate-level outputs with no account identif
 
 | File | Description |
 |---|---|
-| `cognitive_fusion_index.csv` | CFI scores and component z-scores for all seven narrative categories (Table 5) |
-| `community_porosity.csv` | Community porosity values per community per temporal phase (pre- and post-shift) |
-| `descriptive_engagement_per_narrative.csv` | Median view counts and tweet counts per narrative (Table S1) |
-| `excitation_index2.csv` | Excitation Index scores and component values per narrative (Table 4) |
-| `excitation_integrated_table2.csv` | Full integrated EI component table including post-shift engagement per tweet |
-| `kruskal_wallis_engagement.csv` | Kruskal-Wallis test results for engagement metric comparisons across narratives |
-| `meta_network_per_narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length (Table S4) |
-| `pairwise_mannwhitney_engagement.csv` | Pairwise Mann-Whitney U test results with Bonferroni-corrected p-values and effect sizes |
-| `penetration_by_narrative.csv` | Cross-community edge counts, maximum hop depth, and communities reached per narrative (Table 4) |
-| `penetration_by_topic.csv` | Cross-community penetration statistics per individual BERTopic topic prior to narrative consolidation |
+| `cognitive fusion index.csv` | CFI scores and component z-scores for all seven narrative categories (Table 5) |
+| `community porosity.csv` | Community porosity values per community per temporal phase (pre- and post-shift) |
+| `descriptive engagement per narrative.csv` | Median view counts and tweet counts per narrative (Table S1) |
+| `excitation index.csv` | Excitation Index scores and component values per narrative (Table 4) |
+| `excitation integrated table.csv` | Full integrated EI component table including post-shift engagement per tweet |
+| `kruskal wallis engagement.csv` | Kruskal-Wallis test results for engagement metric comparisons across narratives |
+| `meta network per narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length (Table S4) |
+| `pairwise mannwhitney engagement.csv` | Pairwise Mann-Whitney U test results with Bonferroni-corrected p-values and effect sizes |
+| `penetration by narrative.csv` | Cross-community edge counts, maximum hop depth, and communities reached per narrative (Table 4) |
+| `penetration by topic.csv` | Cross-community penetration statistics per individual BERTopic topic prior to narrative consolidation |
 
 #### derived-data/hashed/ (account-level, usernames hashed)
 
 | File | Description |
 |---|---|
-| `Data_bert_with_topics2_hashed.csv` | Full tweet dataset with BERTopic topic assignments and probabilities |
-| `Data_diffusion_analysis2_hashed.csv` | Tweet dataset with diffusion scores, narrative labels, and phase assignments |
-| `Data_with_community3_hashed.csv` | Tweet dataset with Louvain community assignments |
-| `actor_engagement_structural_merged_hashed.csv` | Per-account engagement metrics merged with structural reach measures |
-| `actor_roles_classification_hashed.csv` | Structural role classification (Attention Sink, Local Amplifier, Diffusion Driver) per account |
-| `affan_community_propagation_fixed2_hashed.csv` | First-mover account per community for the Affan Kurniawan cascade |
-| `cascade_hop_levels_hashed.csv` | Hop-level assignments for all accounts reached in the BFS cascade traversal |
-| `community_summary_hashed.csv` | Community-level summary statistics including size and degree distribution |
-| `network_edges_hashed.csv` | Directed edge list with interaction type, weight, and temporal metadata |
-| `network_nodes_hashed.xlsx` | Node list with in-degree, out-degree, and account type |
-| `network_nodes_with_community3_hashed.csv` | Node list with Louvain community assignments and account type |
+| `Data bert with topics hashed.csv` | Full tweet dataset with BERTopic topic assignments and probabilities |
+| `Data diffusion analysis hashed.csv` | Tweet dataset with diffusion scores, narrative labels, and phase assignments |
+| `Data with community hashed.csv` | Tweet dataset with Louvain community assignments |
+| `actor engagement structural merged hashed.csv` | Per-account engagement metrics merged with structural reach measures |
+| `actor roles classification hashed.csv` | Structural role classification (Attention Sink, Local Amplifier, Diffusion Driver) per account |
+| `affan community propagation fixed hashed.csv` | First-mover account per community for the Affan Kurniawan cascade |
+| `cascade hop levels hashed.csv` | Hop-level assignments for all accounts reached in the BFS cascade traversal |
+| `community summary hashed.csv` | Community-level summary statistics including size and degree distribution |
+| `network edges hashed.csv` | Directed edge list with interaction type, weight, and temporal metadata |
+| `network nodes hashed.xlsx` | Node list with in-degree, out-degree, and account type |
+| `network nodes with community hashed.csv` | Node list with Louvain community assignments and account type |
 
 > **Note on anonymization:** Usernames in all files within `derived-data/hashed/` have been anonymized using a one-way hashing method prior to publication, in compliance with X's Terms of Service and to protect user privacy.
 
@@ -140,57 +140,57 @@ Files in `derived-data/` contain aggregate-level outputs with no account identif
 The notebooks in `analytical-notebook/` implement a sequential computational pipeline. Each notebook corresponds to a distinct methodological stage described in Section 3 of the manuscript. The two supplementary fix notebooks (Stages 10 and 11) produce outputs used in Section 4 and the supplementary materials.
 
 ### Stage 1 — Thematic Modeling via BERTopic
-**Notebook:** `BERTopic_Setup.ipynb`
+**Notebook:** `BERTopic Setup.ipynb`
 
 Identifies thematic structure using BERTopic with Indonesian sentence-BERT embeddings (`firqaaa/indo-sentence-bert-base`), UMAP dimensionality reduction, and HDBSCAN clustering. Produces 19 coherent topics with an outlier rate of approximately 23%. Temporal distributions are used to define the pre-shift (August 1–26) and post-shift (August 28–September 29) analytical windows.
 
 ### Stage 2 — Diffusion Score per Topic
-**Notebook:** `BERTopic_Linking_Diffusion_Depth_to_Topic_Change.ipynb`
+**Notebook:** `BERTopic Linking Diffusion Depth to Topic Change.ipynb`
 
 Links BERTopic-assigned topics to diffusion behavior by computing a composite diffusion score per narrative topic. Outputs are used as inputs to the Excitation Index computation in Stage 6.
 
 ### Stage 3 — Network Graph Construction
-**Notebook:** `Network_Graph_Construction.ipynb`
+**Notebook:** `Network Graph Construction.ipynb`
 
 Constructs a directed weighted graph where nodes represent accounts and edges represent retweets, quote tweets, and replies. Output: 11,426 nodes, 13,994 directed edges.
 
 ### Stage 4 — Community Detection
-**Notebook:** `Community_Detection.ipynb`
+**Notebook:** `Community Detection.ipynb`
 
 Applies the Louvain algorithm to detect community structure. Output: 1,667 communities, modularity = 0.7991.
 
 ### Stage 5 — Social Penetration Metrics
-**Notebook:** `Social_Penetration_Metrics.ipynb`
+**Notebook:** `Social Penetration Metrics.ipynb`
 
 Computes cross-community penetration metrics including community porosity, hop depth per cascade, and inter-community edge ratios across pre- and post-shift temporal windows.
 
 ### Stage 6 — Excitation Effect and Narrative Shift Trigger (Steps 1 and 2)
-**Notebook:** `Excitation_Effect___Narrative_Shift_Trigger__Steps_1_and_2_.ipynb`
+**Notebook:** `Excitation Effect Narrative Shift Trigger Steps 1 and 2.ipynb`
 
 Reconstructs cascade sequences in chronological order using timestamped interaction events matched to BERTopic-assigned topics. Computes engagement velocity and temporal excitation patterns. Includes the chi-square test for the cross-community ratio shift (pre-shift 13.5% vs. post-shift 16.9%).
 
 ### Stage 7 — Excitation Effect and Narrative Shift Trigger (Steps 3 and 4)
-**Notebook:** `Excitation_Effect___Narrative_Shift_Trigger__Steps_3_and_4_.ipynb`
+**Notebook:** `Excitation Effect Narrative Shift Trigger Steps 3 and 4.ipynb`
 
 Performs statistical integration of cascade components and formally computes the Excitation Index (EI) as the unweighted mean of four z-scored indicators: mean diffusion score, maximum hop depth, mean hop depth, and post-shift median engagement per tweet.
 
 ### Stage 8 — Actor Role Analysis
-**Notebook:** `Actor_Role_Analysis.ipynb`
+**Notebook:** `Actor Role Analysis.ipynb`
 
 Classifies each account into one of three structural roles: Attention Sink, Local Amplifier, or Diffusion Driver, based on the in-degree to out-degree ratio and cross-community edge count. Includes the chi-square test for the association between account type and structural role (χ² = 275.41, p < 0.001, df = 4).
 
 ### Stage 9 — Cross-Community Penetration and Cognitive Fusion
-**Notebook:** `Cross-Community_Penetration___Cognitive_Fusion.ipynb`
+**Notebook:** `Cross-Community Penetration Cognitive Fusion.ipynb`
 
 Computes community porosity at paired temporal windows and the Cognitive Fusion Index (CFI) as the unweighted mean of four z-scored structural indicators: maximum hop depth, mean hop depth, post-shift porosity, and unique inter-community dyads. Includes the Wilcoxon signed-rank test (n = 38, W = 178, p = 0.025) and CFI sensitivity analysis under four alternative weighting schemes.
 
 ### Stage 10 — Supplementary: Engagement Comparison per Narrative
-**Notebook:** `Fix_Analysis_Novelty3_Engagement_per_Narrative__3_.ipynb`
+**Notebook:** `Fix Analysis Novelty3 Engagement per Narrative 3.ipynb`
 
 Supplementary analysis demonstrating that the Affan Kurniawan narrative produced significantly higher diffusion intensity than economic grievance narratives, measured through Kruskal-Wallis and pairwise Mann-Whitney U tests (Bonferroni-corrected α = 0.000476) on view count distributions across all seven narrative categories. Produces the engagement statistics reported in Table S1 and Section 4.2 of the manuscript.
 
 ### Stage 11 — Supplementary: Figure 6 (Engagement vs. Structural Reach)
-**Notebook:** `Fix_Figure6_Engagement_vs_Structural_Reach_Final.ipynb`
+**Notebook:** `Fix Figure6 Engagement vs Structural Reach Final.ipynb`
 
 Produces Figure 6 (the dissociation between platform engagement and cross-community structural reach across account types) and computes the Spearman correlation between cumulative view count and cross-community edges (ρ = 0.232, p = 8.73 × 10⁻⁷⁹, n = 6,365). This notebook incorporates the post-relabeling corrected account classification file.
 
