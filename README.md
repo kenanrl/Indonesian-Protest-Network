@@ -30,7 +30,7 @@ The dataset provided in this repository has been processed to comply with platfo
 Indonesian-Protest-Network/
 │
 ├── main-data/
-│   └── raw-data-hashed.csv                                                      ← Anonymized raw tweet dataset
+│   └── Book62-hashed.csv                                                        ← Anonymized raw tweet dataset
 │
 ├── analytical-notebook/
 │   ├── BERTopic Setup.ipynb                                                     ← Topic modeling on protest tweets
@@ -87,7 +87,7 @@ Indonesian-Protest-Network/
 
 | File | Description |
 |---|---|
-| `main-data/raw-data-hashed.csv` | Anonymized tweet dataset: 29,289 tweets from 11,426 unique accounts |
+| `main-data/Book62-hashed.csv` | Anonymized tweet dataset: 29,289 tweets from 11,426 unique accounts |
 
 #### Column Dictionary — Raw Data
 
