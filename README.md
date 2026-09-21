@@ -18,7 +18,7 @@ The repository is shared to support transparency and reproducibility in line wit
 
 ## Data Availability Statement
 
-The data supporting the findings of this study were collected from platform X (formerly Twitter) using keyword-based queries targeting protest-related hashtags and terms. The raw dataset cannot be shared in its original form because of platform Terms of Service restrictions.
+The data supporting the findings of this study were collected from platform X (formerly Twitter) using keyword-based queries targeting protest-related hashtags and terms. The data were collected using SocialX (https://socialx.id), a third-party data service that retrieves posts through the platform's official API under its own service agreement. The raw dataset cannot be shared in its original form because of platform Terms of Service restrictions.
 
 The dataset provided here has been processed to comply with platform policies and to protect user privacy. All account identifiers have been **irreversibly anonymized through one-way hashing** prior to publication, so original usernames are not recoverable. Tweet text is retained in the shared files because it is required to reproduce the thematic modeling. Users of this data remain responsible for complying with X's Terms of Service.
 
