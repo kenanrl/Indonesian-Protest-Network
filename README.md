@@ -270,12 +270,15 @@ The intercoder reliability notebooks read coder sheets that are not published be
 | --- | --- |
 | NetworkX | 3.6.1 |
 | SciPy | 1.16.3 |
-| BERTopic | latest stable |
-| HDBSCAN | latest stable |
-| UMAP-learn | latest stable |
-| pandas | latest stable |
+| NumPy | 2.1.3 |
+| BERTopic | 0.17.4 |
+| HDBSCAN | 0.8.44 |
+| UMAP-learn | 0.5.12 |
+| pandas | 2.2.3 |
+| scikit-learn | 1.6.1 |
+| python-louvain | latest stable |
+| openpyxl | latest stable |
 | matplotlib | latest stable |
-| scikit-learn | latest stable |
 | statsmodels | latest stable |
 
 ---
