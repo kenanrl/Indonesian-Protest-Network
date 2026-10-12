@@ -130,7 +130,7 @@ Files in `derived-data/` contain aggregate-level outputs with no account identif
 
 | File | Description |
 | --- | --- |
-| `Data bert with topics hashed.csv` | Full tweet dataset with BERTopic topic assignments and probabilities |
+| `Data bert with topics hashed.csv` | Full tweet dataset with BERTopic topic assignments (topic probabilities partially available, see Revision Notes) |
 | `Data diffusion analysis hashed.csv` | Tweet dataset with diffusion scores, narrative labels, and phase assignments |
 | `Data with community hashed.csv` | Tweet dataset with Louvain community assignments |
 | `actor engagement structural merged hashed.csv` | Per-account engagement metrics merged with structural reach measures |
@@ -252,6 +252,10 @@ Assesses the selection implied by restricting the paired porosity analysis to th
 Computes rank-biserial effect sizes with 95% bootstrap confidence intervals (B = 10,000, seed 42) for the pairwise engagement comparisons across the seven narrative categories.
 
 ---
+
+## Revision Notes
+
+**R2 (October 2026).** Engagement and account counts (view, reply, retweet, favorite, quote, follower, following, and status counts) and the `is_quote` and `verified` flags in `derived-data/hashed/Data_bert_with_topics_hashed.csv` and `derived-data/hashed/Data_with_community_hashed.csv` had been stored at ten times their true value because of a spreadsheet locale conversion. They were restored from `main-data/Book62-hashed.csv` by matching `tweet_url`, and `derived-data/descriptive_engagement_per_narrative.csv` was regenerated. The `probability` column in these two files had been corrupted by the same conversion; it was restored from `Data_diffusion_analysis_hashed.csv` where available and left empty otherwise. No reported analysis uses this column. Rank-based statistics (Spearman correlations, Mann-Whitney and Kruskal-Wallis tests, rank-biserial effect sizes) and the Excitation Index are unaffected. Absolute view counts reported in the manuscript and Figure 4 were corrected accordingly.
 
 ## Replication Instructions
 
