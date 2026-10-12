@@ -54,7 +54,8 @@ Indonesian-Protest-Network/
 │   ├── Dyadic Dependence Robustness.ipynb                                       ← Cross-community shift on unique dyads
 │   ├── Duration and Volume Control.ipynb                                        ← Day-level cross-community ratio test
 │   ├── Paired Community Selection-Bias Assessment.ipynb                         ← 38 selected vs 75 excluded communities
-│   └── Engagement Effect Sizes and CIs.ipynb                                    ← Rank-biserial effect sizes with 95% CI
+│   ├── Engagement Effect Sizes and CIs.ipynb                                    ← Rank-biserial effect sizes with 95% CI
+│   └── Actor Role Chi-square Permutation.ipynb                                  ← Network-aware nulls for account type × role
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
@@ -250,6 +251,11 @@ Assesses the selection implied by restricting the paired porosity analysis to th
 **Notebook:** `Engagement Effect Sizes and CIs.ipynb`
 
 Computes rank-biserial effect sizes with 95% bootstrap confidence intervals (B = 10,000, seed 42) for the pairwise engagement comparisons across the seven narrative categories.
+
+### Actor Role Chi-square Permutation
+**Notebook:** `Actor Role Chi-square Permutation.ipynb`
+
+Tests the association between account type and structural role (χ² = 275.41, df = 4) against two network-aware nulls: a permutation of account-type labels across all nodes and a permutation within Louvain communities that preserves community composition (10,000 permutations each, seed 42). Neither null produced a value as large as the observed statistic (largest null χ² = 29.3 and 57.0). Reports a community-resampled 95% CI for Cramér's V ([0.082, 0.136]). Input: `derived-data/hashed/actor_roles_classification_hashed.csv`.
 
 ---
 
