@@ -257,12 +257,12 @@ Computes rank-biserial effect sizes with 95% bootstrap confidence intervals (B =
 ### Actor Role Chi-square Permutation
 **Notebook:** `Actor Role Chi-square Permutation.ipynb`
 
+Tests the association between account type and structural role (χ² = 275.41, df = 4) against two network-aware nulls: a permutation of account-type labels across all nodes and a permutation within Louvain communities that preserves community composition (10,000 permutations each, seed 42). Neither null produced a value as large as the observed statistic (largest null χ² = 29.3 and 57.0). Reports a community-resampled 95% CI for Cramér's V ([0.082, 0.136]). Input: `derived-data/hashed/actor_roles_classification_hashed.csv`.
+
 ### Modularity Null Models
 **Notebooks:** `Modularity Null Model.ipynb` · `Modularity Null Model (Unweighted).ipynb`
 
 Benchmarks the modularity of the Louvain partition against 100 degree-preserving randomizations of the undirected network, on the whole network and on its largest connected component. The first notebook uses edge weights (observed 0.7991 against a null mean of 0.776) and adds an Erdős–Rényi reference graph with the same numbers of nodes and edges. The second ignores edge weights (observed 0.8034 against 0.731, mean of five Louvain seeds) and preserves connectivity when rewiring the largest component. It runs in parallel on Linux, including Colab (about 35 minutes), and resumes if interrupted. Observed modularity exceeded all 100 randomizations in every degree-preserving comparison. Together the two notebooks reproduce Table S13.
-
-Tests the association between account type and structural role (χ² = 275.41, df = 4) against two network-aware nulls: a permutation of account-type labels across all nodes and a permutation within Louvain communities that preserves community composition (10,000 permutations each, seed 42). Neither null produced a value as large as the observed statistic (largest null χ² = 29.3 and 57.0). Reports a community-resampled 95% CI for Cramér's V ([0.082, 0.136]). Input: `derived-data/hashed/actor_roles_classification_hashed.csv`.
 
 ---
 
