@@ -58,6 +58,7 @@ Indonesian-Protest-Network/
 │   ├── Actor Role Chi-square Permutation.ipynb                                  ← Network-aware nulls for account type × role
 │   ├── Modularity Null Model.ipynb                                              ← Weighted and Erdős–Rényi modularity nulls (Table S13)
 │   └── Modularity Null Model (Unweighted).ipynb                                 ← Unweighted degree-preserving modularity null (Table S13)
+│   └── Cross-Community Shift Cluster-Robust.ipynb                               ← Cluster-robust pre/post cross-community comparison (Table S14)
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
@@ -83,6 +84,7 @@ Indonesian-Protest-Network/
 │       ├── network edges hashed.csv                                             ← Directed edge list with interaction metadata
 │       ├── network nodes hashed.xlsx                                            ← Node list with degree and account type
 │       └── network nodes with community hashed.csv                              ← Node list with Louvain community assignments
+│       └── temporal edges with community hashed.csv                             ← Interaction events with date, period, and community of each endpoint
 │
 ├── CITATION.cff                                                                 ← Citation metadata
 ├── LICENSE                                                                      ← Creative Commons Attribution 4.0 License
@@ -144,6 +146,7 @@ Files in `derived-data/` contain aggregate-level outputs with no account identif
 | `network edges hashed.csv` | Directed edge list with interaction type, weight, and temporal metadata |
 | `network nodes hashed.xlsx` | Node list with in-degree, out-degree, and account type |
 | `network nodes with community hashed.csv` | Node list with Louvain community assignments and account type |
+| `temporal edges with community hashed.csv` | One row per interaction event (21,420 replies, quotes, and mentions) with date, period, edge type, narrative, source and target communities, and a cross-community flag. Summing events per source-target pair reproduces `network edges hashed.csv` |
 
 > **Note on anonymization:** Usernames in all files within `derived-data/hashed/` have been anonymized using a one-way hashing method prior to publication, in compliance with X's Terms of Service and to protect user privacy.
 
@@ -263,6 +266,11 @@ Tests the association between account type and structural role (χ² = 275.41, d
 **Notebooks:** `Modularity Null Model.ipynb` · `Modularity Null Model (Unweighted).ipynb`
 
 Benchmarks the modularity of the Louvain partition against 100 degree-preserving randomizations of the undirected network, on the whole network and on its largest connected component. The first notebook uses edge weights (observed 0.7991 against a null mean of 0.776) and adds an Erdős–Rényi reference graph with the same numbers of nodes and edges. The second ignores edge weights (observed 0.8034 against 0.731, mean of five Louvain seeds) and preserves connectivity when rewiring the largest component. It runs in parallel on Linux, including Colab (about 35 minutes), and resumes if interrupted. Observed modularity exceeded all 100 randomizations in every degree-preserving comparison. Together the two notebooks reproduce Table S13.
+
+### Cross-Community Shift Cluster-Robust
+**Notebook:** `Cross-Community Shift Cluster-Robust.ipynb`
+
+Re-tests the pre-shift and post-shift change in the share of cross-community interactions (Table 3) while accounting for dependence among interactions sent by the same account. Fits event-level logistic regressions with standard errors clustered by source account, target account, both, and source community, and adds a cluster bootstrap over source accounts (B = 10,000, seed 42). The increase remains significant under source-account clustering (OR = 1.28, 95% CI [1.02, 1.61]). The comparison is repeated on interactions originating in the largest connected component, where every cross-community interaction occurs, and with account fixed effects. Reproduces Table S14. Input: `derived-data/hashed/temporal_edges_with_community_hashed.csv`, `network_nodes_with_community_hashed.csv`, `network_edges_hashed.csv`.
 
 ---
 
