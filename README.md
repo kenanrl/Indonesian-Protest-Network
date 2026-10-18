@@ -59,6 +59,7 @@ Indonesian-Protest-Network/
 │   ├── Modularity Null Model.ipynb                                              ← Weighted and Erdős–Rényi modularity nulls (Table S13)
 │   └── Modularity Null Model (Unweighted).ipynb                                 ← Unweighted degree-preserving modularity null (Table S13)
 │   └── Cross-Community Shift Cluster-Robust.ipynb                               ← Cluster-robust pre/post cross-community comparison (Table S14)
+│   └── Broker Communities and Target-only Accounts.ipynb                        ← Community-level brokerage (Table S15) and target-only accounts
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
@@ -271,6 +272,11 @@ Benchmarks the modularity of the Louvain partition against 100 degree-preserving
 **Notebook:** `Cross-Community Shift Cluster-Robust.ipynb`
 
 Re-tests the pre-shift and post-shift change in the share of cross-community interactions (Table 3) while accounting for dependence among interactions sent by the same account. Fits event-level logistic regressions with standard errors clustered by source account, target account, both, and source community, and adds a cluster bootstrap over source accounts (B = 10,000, seed 42). The increase remains significant under source-account clustering (OR = 1.28, 95% CI [1.02, 1.61]). The comparison is repeated on interactions originating in the largest connected component, where every cross-community interaction occurs, and with account fixed effects. Reproduces Table S14. Input: `derived-data/hashed/temporal_edges_with_community_hashed.csv`, `network_nodes_with_community_hashed.csv`, `network_edges_hashed.csv`.
+
+### Broker Communities and Target-only Accounts
+**Notebook:** `Broker Communities and Target-only Accounts.ipynb`
+
+Separates individual from group-level brokerage. Diffusion Drivers are spread across 49 of the 52 communities in the largest connected component in proportion to community size, while betweenness centrality on the community graph concentrates in a few communities (ten account for 94.2% of the total). Also reports the accounts that appear only as targets of interactions (86 of 117 elite/political and 58 of 120 media/news accounts) and the structural roles of accounts that posted at least one query-matched tweet. Reproduces Table S15. Input: `main-data/Book62-hashed.csv` and, from `derived-data/hashed/`, `actor_roles_classification_hashed.csv`, `network_nodes_with_community_hashed.csv`, `network_edges_hashed.csv`, `Data_with_community_hashed.csv`.
 
 ---
 
