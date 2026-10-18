@@ -59,7 +59,7 @@ Indonesian-Protest-Network/
 │   ├── Modularity Null Model.ipynb                                              ← Weighted and Erdős–Rényi modularity nulls (Table S13)
 │   ├── Modularity Null Model (Unweighted).ipynb                                 ← Unweighted degree-preserving modularity null (Table S13)
 │   ├── Cross-Community Shift Cluster-Robust.ipynb                               ← Cluster-robust pre/post cross-community comparison (Table S14)
-│   ├── Broker Communities and Target-only Accounts.ipynb                        ← Community-level brokerage (Table S15) and target-only accounts
+│   └── Broker Communities and Target-only Accounts.ipynb                        ← Community-level brokerage (Table S15) and target-only accounts
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
