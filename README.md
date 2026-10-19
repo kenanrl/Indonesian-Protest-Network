@@ -59,7 +59,8 @@ Indonesian-Protest-Network/
 │   ├── Modularity Null Model.ipynb                                              ← Weighted and Erdős–Rényi modularity nulls (Table S13)
 │   ├── Modularity Null Model (Unweighted).ipynb                                 ← Unweighted degree-preserving modularity null (Table S13)
 │   ├── Cross-Community Shift Cluster-Robust.ipynb                               ← Cluster-robust pre/post cross-community comparison (Table S14)
-│   └── Broker Communities and Target-only Accounts.ipynb                        ← Community-level brokerage (Table S15) and target-only accounts
+│   ├── Broker Communities and Target-only Accounts.ipynb                        ← Community-level brokerage (Table S15) and target-only accounts
+│   └── New Tie Formation.ipynb                                                  ← Cross-boundary share of new ties before and after the shift
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
@@ -277,6 +278,11 @@ Re-tests the pre-shift and post-shift change in the share of cross-community int
 **Notebook:** `Broker Communities and Target-only Accounts.ipynb`
 
 Separates individual from group-level brokerage. Diffusion Drivers are spread across 49 of the 52 communities in the largest connected component in proportion to community size, while betweenness centrality on the community graph concentrates in a few communities (ten account for 94.2% of the total). Also reports the accounts that appear only as targets of interactions (86 of 117 elite/political and 58 of 120 media/news accounts) and the structural roles of accounts that posted at least one query-matched tweet. Reproduces Table S15. Input: `main-data/Book62-hashed.csv` and, from `derived-data/hashed/`, `actor_roles_classification_hashed.csv`, `network_nodes_with_community_hashed.csv`, `network_edges_hashed.csv`, `Data_with_community_hashed.csv`.
+
+### New Tie Formation
+**Notebook:** `New Tie Formation.ipynb`
+
+Tests whether accounts formed new ties across community boundaries more often after the narrative shift. Among accounts already active before the shift, 54.7% of post-shift new ties crossed a community boundary, against 58.9% of new ties formed in the second half of the pre-shift window (OR = 0.84, 95% CI [0.61, 1.15], p = 0.264), with the same result for equal seven-day windows. Input: `derived-data/hashed/temporal_edges_with_community_hashed.csv`. Reported in Section 5.7.
 
 ---
 
