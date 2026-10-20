@@ -60,7 +60,9 @@ Indonesian-Protest-Network/
 │   ├── Modularity Null Model (Unweighted).ipynb                                 ← Unweighted degree-preserving modularity null (Table S13)
 │   ├── Cross-Community Shift Cluster-Robust.ipynb                               ← Cluster-robust pre/post cross-community comparison (Table S14)
 │   ├── Broker Communities and Target-only Accounts.ipynb                        ← Community-level brokerage (Table S15) and target-only accounts
-│   └── New Tie Formation.ipynb                                                  ← Cross-boundary share of new ties before and after the shift
+│   ├── New Tie Formation.ipynb                                                  ← Cross-boundary share of new ties before and after the shift
+│   ├── Effect Sizes and Confidence Intervals.ipynb                              ← Effect sizes and 95% CIs added in the second revision
+│   └── Intercoder Reliability CI.ipynb                                          ← Bootstrap CI for Cohen's kappa (coder sheets not published)
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
@@ -283,6 +285,16 @@ Separates individual from group-level brokerage. Diffusion Drivers are spread ac
 **Notebook:** `New Tie Formation.ipynb`
 
 Tests whether accounts formed new ties across community boundaries more often after the narrative shift. Among accounts already active before the shift, 54.7% of post-shift new ties crossed a community boundary, against 58.9% of new ties formed in the second half of the pre-shift window (OR = 0.84, 95% CI [0.61, 1.15], p = 0.264), with the same result for equal seven-day windows. Input: `derived-data/hashed/temporal_edges_with_community_hashed.csv`. Reported in Section 5.7.
+
+### Effect Sizes and Confidence Intervals
+**Notebook:** `Effect Sizes and Confidence Intervals.ipynb`
+
+Recomputes the effect sizes and 95% confidence intervals added in the second revision: the Fisher odds ratio and permutation difference for the unique-dyad comparison, the rank-biserial r and Spearman correlation for the daily cross-community ratio, the matched-length windows, the Kruskal-Wallis omnibus for view counts, the Spearman correlation between cumulative views and cross-community edge count, the Wilson interval for first-mover accounts, and the selection comparison for the 38 paired communities. B = 10,000, seed 42. Inputs: `derived-data/hashed/temporal_edges_with_community_hashed.csv`, `derived-data/hashed/network_nodes_with_community_hashed.csv`, `derived-data/hashed/Data_with_community_hashed.csv`, `derived-data/hashed/actor_engagement_structural_merged_hashed.csv`, `derived-data/hashed/affan_community_propagation_fixed_hashed.csv`, `derived-data/community_porosity.csv`. Reported in Sections 4.2 to 4.4.
+
+### Intercoder Reliability CI
+**Notebook:** `Intercoder Reliability CI.ipynb`
+
+Bootstrap 95% confidence interval for Cohen's kappa between the two coders (0.890, 95% CI [0.849, 0.926], B = 10,000, seed 42) and the agreement of the LLM-assisted labels with the human consensus (91.9%, 95% Wilson CI [88.8, 94.2]). Reads coder sheets that are not published. Reported in Section 3.1.
 
 ---
 
