@@ -306,17 +306,23 @@ The intercoder reliability notebooks read coder sheets that are not published be
 | Library | Version |
 | --- | --- |
 | NetworkX | 3.6.1 |
+| python-louvain | 0.16 |
 | SciPy | 1.16.3 |
+| statsmodels | 0.15.0 |
 | NumPy | 2.1.3 |
-| BERTopic | 0.17.4 |
-| HDBSCAN | 0.8.44 |
-| UMAP-learn | 0.5.12 |
 | pandas | 2.2.3 |
 | scikit-learn | 1.6.1 |
-| python-louvain | latest stable |
+| BERTopic | 0.17.4 |
+| sentence-transformers | 5.7.0 |
+| UMAP-learn | 0.5.12 |
+| HDBSCAN | 0.8.44 |
+| Sastrawi | 1.0.1 |
+| gensim | 4.4.0 |
+| matplotlib | 3.10.0 |
 | openpyxl | latest stable |
-| matplotlib | latest stable |
-| statsmodels | latest stable |
+| Gephi (Figure 2) | 0.11.3, Circle Pack Layout plugin |
+
+Full software versions and parameter settings for each analytical stage are reported in Table S16 of the Supplementary Material.
 
 ---
 
