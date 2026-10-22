@@ -63,7 +63,8 @@ Indonesian-Protest-Network/
 │   ├── New Tie Formation.ipynb                                                  ← Cross-boundary share of new ties before and after the shift
 │   ├── Effect Sizes and Confidence Intervals.ipynb                              ← Effect sizes and 95% CIs added in the second revision
 │   ├── Intercoder Reliability CI.ipynb                                          ← Bootstrap CI for Cohen's kappa (coder sheets not published)
-│   └── Temporal Figures.ipynb                                                   ← Figure 3 and Figure S1 from the hashed event and tweet files
+│   ├── Temporal Figures.ipynb                                                   ← Figure 3 and Figure S1 from the hashed event and tweet files
+│   └── Excitation Index Recomputed.ipynb                                        ← Excitation Index on corrected engagement data (Table 4, Table S10)
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
@@ -71,6 +72,7 @@ Indonesian-Protest-Network/
 │   ├── descriptive engagement per narrative.csv                                 ← Median view counts per narrative
 │   ├── excitation index.csv                                                     ← Excitation Index scores per narrative
 │   ├── excitation integrated table.csv                                          ← Integrated EI component table
+│   ├── excitation index recomputed.csv                                          ← Recomputed Excitation Index (Table 4, Table S10)
 │   ├── kruskal wallis engagement.csv                                            ← Kruskal-Wallis engagement test results
 │   ├── meta network per narrative.csv                                           ← Meta-network community connectivity per narrative
 │   ├── pairwise mannwhitney engagement.csv                                      ← Pairwise Mann-Whitney U test results
@@ -128,8 +130,8 @@ Files in `derived-data/` contain aggregate-level outputs with no account identif
 | `cognitive fusion index.csv` | CFI scores and component z-scores for all seven narrative categories |
 | `community porosity.csv` | Community porosity values per community per temporal phase (pre- and post-shift) |
 | `descriptive engagement per narrative.csv` | Median view counts and tweet counts per narrative |
-| `excitation index.csv` | Excitation Index scores and component values per narrative |
-| `excitation integrated table.csv` | Full integrated EI component table including post-shift engagement per tweet |
+| `excitation index.csv` | Excitation Index scores and component values per narrative (first computation, superseded by `excitation index recomputed.csv`) |
+| `excitation index recomputed.csv` | Recomputed Excitation Index components, scores, and ranks reported in Table 4 and Table S10 || `excitation integrated table.csv` | Full integrated EI component table including post-shift engagement per tweet |
 | `kruskal wallis engagement.csv` | Kruskal-Wallis test results for engagement metric comparisons across narratives |
 | `meta network per narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length |
 | `pairwise mannwhitney engagement.csv` | Pairwise Mann-Whitney U test results with Bonferroni-corrected p-values and effect sizes |
@@ -196,7 +198,7 @@ Reconstructs cascade sequences in chronological order using timestamped interact
 ### Stage 7 — Excitation Effect and Narrative Shift Trigger (Steps 3 and 4)
 **Notebook:** `Excitation Effect Narrative Shift Trigger Steps 3 and 4.ipynb`
 
-Performs statistical integration of cascade components and formally computes the Excitation Index (EI) as the unweighted mean of four z-scored indicators: mean diffusion score, maximum hop depth, mean hop depth, and post-shift median engagement per tweet.
+Performs statistical integration of cascade components and formally computes the Excitation Index (EI) as the unweighted mean of four z-scored indicators: mean diffusion score, maximum hop depth, mean hop depth, and post-shift median engagement per tweet. The values reported in the revised manuscript come from Excitation Index Recomputed.ipynb (see Robustness and Reviewer-Requested Analyses).
 
 ### Stage 8 — Actor Role Analysis
 **Notebook:** `Actor Role Analysis.ipynb`
@@ -302,11 +304,18 @@ Bootstrap 95% confidence interval for Cohen's kappa between the two coders (0.89
 
 Regenerates Figure 3 (daily interaction events per narrative, with dashed lines on August 25, 28, and 31) and Figure S1 (daily tweet volume of the twelve largest BERTopic topics, with the August 26 to 30 transition zone shaded). Topic numbers follow the `topic` column, which matches Table S8. Inputs: `derived-data/hashed/temporal_edges_with_community_hashed.csv`, `derived-data/hashed/Data_bert_with_topics_hashed.csv`. Reported in Section 4.2 and the Supplementary Material.
 
+### Excitation Index Recomputed
+**Notebook:** `Excitation Index Recomputed.ipynb`
+
+Recomputes the Excitation Index on the corrected engagement data. Tweets without recorded engagement metrics (2,267 of 10,777 narrative-labelled tweets) are excluded rather than counted as zero, and the post-shift engagement component uses the August 28 to September 29 window applied in the other analyses. The hop components are unchanged. Affan Kurniawan remains first (1.93, and 1.95 without the post-shift engagement component), and the top three positions are unchanged. Writes `derived-data/excitation_index_recomputed.csv` and compares it with the first computation in `derived-data/excitation_index.csv`. Inputs: `derived-data/hashed/Data_with_community_hashed.csv`, `derived-data/excitation_integrated_table.csv`, `derived-data/excitation_index.csv`. Reproduces Table 4 and Table S10.
+
 ---
 
 ## Revision Notes
 
-**R2 (October 2026).** Engagement and account counts (view, reply, retweet, favorite, quote, follower, following, and status counts) and the `is_quote` and `verified` flags in `derived-data/hashed/Data_bert_with_topics_hashed.csv` and `derived-data/hashed/Data_with_community_hashed.csv` had been stored at ten times their true value because of a spreadsheet locale conversion. They were restored from `main-data/Book62-hashed.csv` by matching `tweet_url`, and `derived-data/descriptive_engagement_per_narrative.csv` was regenerated. The `probability` column in these two files had been corrupted by the same conversion; it was restored from `Data_diffusion_analysis_hashed.csv` where available and left empty otherwise. No reported analysis uses this column. Rank-based statistics (Spearman correlations, Mann-Whitney and Kruskal-Wallis tests, rank-biserial effect sizes) and the Excitation Index are unaffected. Absolute view counts reported in the manuscript and Figure 4 were corrected accordingly.
+**R2 (October 2026).** Engagement and account counts (view, reply, retweet, favorite, quote, follower, following, and status counts) and the `is_quote` and `verified` flags in `derived-data/hashed/Data_bert_with_topics_hashed.csv` and `derived-data/hashed/Data_with_community_hashed.csv` had been stored at ten times their true value because of a spreadsheet locale conversion. They were restored from `main-data/Book62-hashed.csv` by matching `tweet_url`, and `derived-data/descriptive_engagement_per_narrative.csv` was regenerated. The `probability` column in these two files had been corrupted by the same conversion; it was restored from `Data_diffusion_analysis_hashed.csv` where available and left empty otherwise. No reported analysis uses this column. Rank-based statistics (Spearman correlations, Mann-Whitney and Kruskal-Wallis tests, rank-biserial effect sizes) are unaffected. Absolute view counts reported in the manuscript and Figure 4 were corrected accordingly.
+
+The Excitation Index was recomputed in the same revision (Excitation Index Recomputed.ipynb). In the first computation, the post-shift engagement component counted tweets without recorded engagement metrics as zero and included August 27. The recomputed index excludes these tweets from both engagement-based components and uses the August 28 to September 29 window. excitation_index.csv is kept as the record of the first computation, and excitation_index_recomputed.csv holds the values reported in Table 4 and Table S10.
 
 ## Replication Instructions
 
