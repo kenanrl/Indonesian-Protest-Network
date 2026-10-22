@@ -62,7 +62,8 @@ Indonesian-Protest-Network/
 │   ├── Broker Communities and Target-only Accounts.ipynb                        ← Community-level brokerage (Table S15) and target-only accounts
 │   ├── New Tie Formation.ipynb                                                  ← Cross-boundary share of new ties before and after the shift
 │   ├── Effect Sizes and Confidence Intervals.ipynb                              ← Effect sizes and 95% CIs added in the second revision
-│   └── Intercoder Reliability CI.ipynb                                          ← Bootstrap CI for Cohen's kappa (coder sheets not published)
+│   ├── Intercoder Reliability CI.ipynb                                          ← Bootstrap CI for Cohen's kappa (coder sheets not published)
+│   └── Temporal Figures.ipynb                                                   ← Figure 3 and Figure S1 from the hashed event and tweet files
 │
 ├── derived-data/
 │   ├── cognitive fusion index.csv                                               ← CFI scores and z-scores per narrative
@@ -295,6 +296,11 @@ Recomputes the effect sizes and 95% confidence intervals added in the second rev
 **Notebook:** `Intercoder Reliability CI.ipynb`
 
 Bootstrap 95% confidence interval for Cohen's kappa between the two coders (0.890, 95% CI [0.849, 0.926], B = 10,000, seed 42) and the agreement of the LLM-assisted labels with the human consensus (91.9%, 95% Wilson CI [88.8, 94.2]). Reads coder sheets that are not published. Reported in Section 3.1.
+
+### Temporal Figures
+**Notebook:** `Temporal Figures.ipynb`
+
+Regenerates Figure 3 (daily interaction events per narrative, with dashed lines on August 25, 28, and 31) and Figure S1 (daily tweet volume of the twelve largest BERTopic topics, with the August 26 to 30 transition zone shaded). Topic numbers follow the `topic` column, which matches Table S8. Inputs: `derived-data/hashed/temporal_edges_with_community_hashed.csv`, `derived-data/hashed/Data_bert_with_topics_hashed.csv`. Reported in Section 4.2 and the Supplementary Material.
 
 ---
 
