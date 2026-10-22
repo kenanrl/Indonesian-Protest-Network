@@ -134,9 +134,9 @@ Files in `derived-data/` contain aggregate-level outputs with no account identif
 | `excitation index recomputed.csv` | Recomputed Excitation Index components, scores, and ranks reported in Table 4 and Table S10 |
 | `excitation integrated table.csv` | Full integrated EI component table including post-shift engagement per tweet |
 | `kruskal wallis engagement.csv` | Kruskal-Wallis test results for engagement metric comparisons across narratives |
-| `meta network per narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length |
+| `meta network per narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length. Each interaction is assigned to the narrative of its own tweet. The communities-connected values are reported in Section 4.4 and Table S4. The diameter and average path length differ slightly from the hop values used in the manuscript, which come from penetration by narrative.csv |
 | `pairwise mannwhitney engagement.csv` | Pairwise Mann-Whitney U test results with Bonferroni-corrected p-values and effect sizes |
-| `penetration by narrative.csv` | Cross-community edge counts, maximum hop depth, and communities reached per narrative |
+| `penetration by narrative.csv` | Cross-community edge counts, maximum hop depth, and communities reached per narrative. Each unique directed edge is assigned to the narrative of its dominant topic. Source of the maximum and mean hop values in Tables 4, 5, S4, S9, and S10 and in both composite indices |
 | `penetration by topic.csv` | Cross-community penetration statistics per individual BERTopic topic prior to narrative consolidation |
 
 #### derived-data/hashed/
