@@ -131,7 +131,8 @@ Files in `derived-data/` contain aggregate-level outputs with no account identif
 | `community porosity.csv` | Community porosity values per community per temporal phase (pre- and post-shift) |
 | `descriptive engagement per narrative.csv` | Median view counts and tweet counts per narrative |
 | `excitation index.csv` | Excitation Index scores and component values per narrative (first computation, superseded by `excitation index recomputed.csv`) |
-| `excitation index recomputed.csv` | Recomputed Excitation Index components, scores, and ranks reported in Table 4 and Table S10 || `excitation integrated table.csv` | Full integrated EI component table including post-shift engagement per tweet |
+| `excitation index recomputed.csv` | Recomputed Excitation Index components, scores, and ranks reported in Table 4 and Table S10 |
+| `excitation integrated table.csv` | Full integrated EI component table including post-shift engagement per tweet |
 | `kruskal wallis engagement.csv` | Kruskal-Wallis test results for engagement metric comparisons across narratives |
 | `meta network per narrative.csv` | Meta-network statistics per narrative: communities connected, diameter, average path length |
 | `pairwise mannwhitney engagement.csv` | Pairwise Mann-Whitney U test results with Bonferroni-corrected p-values and effect sizes |
@@ -307,7 +308,7 @@ Regenerates Figure 3 (daily interaction events per narrative, with dashed lines 
 ### Excitation Index Recomputed
 **Notebook:** `Excitation Index Recomputed.ipynb`
 
-Recomputes the Excitation Index on the corrected engagement data. Tweets without recorded engagement metrics (2,267 of 10,777 narrative-labelled tweets) are excluded rather than counted as zero, and the post-shift engagement component uses the August 28 to September 29 window applied in the other analyses. The hop components are unchanged. Affan Kurniawan remains first (1.93, and 1.95 without the post-shift engagement component), and the top three positions are unchanged. Writes `derived-data/excitation_index_recomputed.csv` and compares it with the first computation in `derived-data/excitation_index.csv`. Inputs: `derived-data/hashed/Data_with_community_hashed.csv`, `derived-data/excitation_integrated_table.csv`, `derived-data/excitation_index.csv`. Reproduces Table 4 and Table S10.
+Recomputes the Excitation Index on the corrected engagement data. Tweets without recorded engagement metrics (2,267 of 10,777 narrative-labeled tweets) are excluded rather than counted as zero, and the post-shift engagement component uses the August 28 to September 29 window applied in the other analyses. The hop components are unchanged. Affan Kurniawan remains first (1.93, and 1.95 without the post-shift engagement component), and the top three positions are unchanged. Writes `derived-data/excitation_index_recomputed.csv` and compares it with the first computation in `derived-data/excitation_index.csv`. Inputs: `derived-data/hashed/Data_with_community_hashed.csv`, `derived-data/excitation_integrated_table.csv`, `derived-data/excitation_index.csv`. Reproduces Table 4 and Table S10.
 
 ---
 
