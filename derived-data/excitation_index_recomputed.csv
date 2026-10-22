@@ -1,0 +1,8 @@
+narrative,label,mean_diffusion,max_hop,avg_hop,post_median_engagement,EI,EI_without_engagement,rank,rank_without_engagement
+Affan Kurniawan,Affan Kurniawan,0.4382,7,2.84,391.0,1.9334,1.9536,1,1
+Keamanan & Respons,Security & Response,0.1696,5,2.63,304.0,0.8215,0.7448,2,2
+Demo & DPR,Parliament & Protest,-0.0332,5,2.27,196.0,0.038,0.0398,3,3
+Kekerasan Aparat,State Apparatus Violence,-0.0878,4,1.93,108.5,-0.6684,-0.6267,4,5
+Politik & Tuntutan,Politics & Demands,0.0693,3,1.87,110.0,-0.6775,-0.6436,5,6
+Ekonomi Rakyat,Economic Grievance,-0.0986,4,2.0,86.5,-0.6882,-0.5839,6,4
+Gerakan/Hashtag,Movement Coordination,-0.0397,3,1.83,152.0,-0.7589,-0.8842,7,7
